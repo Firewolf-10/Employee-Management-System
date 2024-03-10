@@ -39,7 +39,7 @@ public class EmployeeRestcontroller {
 	}
 	
 	@PutMapping("/update/{myString}")
-	public String updateEmployee(@RequestBody Employee employee, @PathVariable(value = "myString") String myString) {
+	public String updateEmployee(Employee employee, @PathVariable(value = "myString") String myString) {
 		System.out.println("Employee "+employee);
 //		System.out.println("id "+id);
 		return employeeService.updateEmployee(employee, myString);
